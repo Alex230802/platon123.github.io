@@ -1,0 +1,634 @@
+
+@font-face{
+    font-family: 'League_Gothic';
+    src: url(League_Gothic/static/font/leaguegothic_regular.ttf) format('truetype');
+}
+
+
+
+
+/*@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'League_Gothic';
+}
+
+body{
+    min-height: 1000px;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 100px;
+    z-index: 1000;
+    transition: 0.3s;
+    background: rgb(24, 25, 26);
+}
+header .logo{
+    font-weight: 700;
+    color: blue;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+header .logo span{
+    color: green;
+}
+header ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+header.sticky{
+    background: #7aba32;
+    padding: 5px 100px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+}
+
+header.sticky ul li a{
+    color: #000;
+}
+
+.banner{
+    width: 100%;
+    min-height: 100vh;
+    background: url(file:///C:/wamp/www/pag_pasr/bebes1.jpg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+}
+
+.banner h2{
+    color: #0c29acb9;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1em;
+}
+
+.banner h2 span{
+    color: #ff4949;
+
+}
+
+.services{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    max-width: 100%;
+    margin-top: 60px;
+}
+
+.services .box{
+    width: 300px;
+    margin: 0 auto;
+    box-shadow: 0px 50px 25px rgba(0, 0, 0, .5);
+    padding: 20px;
+}
+
+.services .box h2{
+    color: #ff4949;
+    font-size:  18px;
+
+}
+
+.casoBx{
+display: grid;
+grid-template-columns: auto auto auto auto;
+grid-gap: 20px;
+max-width: 100%;
+    
+}
+.services .box .iconBx{
+    margin-top: 25px;
+
+}
+
+.services .box .iconBx img{
+
+    max-width: 90px;
+    margin-bottom: 15px;
+    
+}
+
+.content h2 {
+    color: #ff4949;
+    font-size: 18px;
+}
+
+/* Slider */
+
+.slider{
+    position: relative;
+}
+
+.slider-items{
+    overflow: hidden;
+}
+
+@keyframes zoom{
+    0%{transform: scale(1.2); opacity: 0;}
+    100%{transform: scale(1); opacity: 1;} 
+}
+.slider-items .item{
+    display: none;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    animation: zoom 1s;
+
+}
+
+.slider-items .item img{
+    max-width: 100px;
+}
+
+.slider-items .item.active{
+    display: block;
+}
+
+.slider-items .item .descripcion{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, .5);
+    line-height: 60px;
+    font-size: 20px;  
+}
+.slider .ir-atras,
+.slider .ir-sig{
+    width: 40px;
+    height: 40px;
+    background: #4978FF;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider .ir-atras{
+    left: 10px;
+}
+.slider .ir-sig{
+    right: 10px;
+}
+.slider .ir-atras:hover,
+.slider .ir-sig:hover{
+    background-color: #a8ba32;
+
+}
+
+
+.casoBx{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 20px;
+    max-width: 100%;
+    margin-top:  40px;
+
+}
+
+.sec{
+    background: #fff;
+    padding: 100px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec .content{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.mxw800p{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.btn{
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+h3{
+    font-size: 40px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+p{
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.advan{
+    background: #D9C6B0;
+    min-height: 50vh;
+}
+.advanBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    max-width: 100%;
+}
+
+.advanBox .box{
+    width: 200px;
+    height: 200px;
+    background: #a8ba32;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+}
+
+.advanBox .box:hover{
+    background: #fff;
+    border: 10px solid #4978ff; 
+}
+.persona{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    position: relative;
+    width: 250px;
+    min-height: 300px;
+}
+.casoBx .persona .imgBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.casoBx .persona .imgBx .img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.casoBx .persona .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    opacity: 0;
+    transition: .2s;
+}
+
+.casoBx .persona .details:hover{
+    opacity: 1;
+
+}
+/* -----------
+
+*/
+
+.contact{
+    background: #000;
+
+}
+
+.contact h3, .contact p{
+    color: #fff;
+}
+
+.contactForm{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+
+}
+
+.contactForm form{
+    width: 100%; 
+}
+
+.contactForm .row100{
+    display: flex;
+    width: 100%;
+
+}
+
+.contactForm .row100 .inputBx50{
+    width: 100%;
+    margin: 0 10px;
+
+}
+
+.contactForm .row100 .inputBx100{
+    width: 100%;
+    margin: 0 10px;
+}
+
+.contactForm .row100 input, 
+.contactForm .row100 textarea{
+    position: relative;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    width: 100%;
+    padding: 20px 0;
+    outline: none;
+    font-size: 18px;
+    font-weight: 300;
+    margin: 10px 0;
+    resize: none;
+    text-align: center;
+    
+
+}
+
+.contactForm .row100 textarea{
+    height:100px ;
+
+}
+
+.contactForm .row100 input::placeholder,
+.contactForm .row100 textarea::placeholder{
+    color: rgba(243, 245, 245, 0.5);
+}
+
+.contactForm .row100 input[type="submit"]{
+    background: #fff;
+    color: #000;
+    max-width: 150px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    cursor: pointer;
+    font-weight: 1000;
+    text-align: center;
+    margin: 50px 0;
+}
+
+.sci ul{
+    display: flex;
+}
+sci ul li{
+    list-style: none;
+}
+.sci ul li a{
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 30px;
+}
+.sci ul li a img{
+    filter: invert(1);
+    max-width: 40px;
+}
+.sci ul li a:hover img{
+    opacity: 0.5;
+}
+
+#button-up{
+    width: 50px;
+    height: 50px;
+    background: #099755;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 4px solid transparent;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color:#fff;
+    font-size: 30px;
+    transition: all 555ms ease;
+    transform: scale(1);
+    box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.5); 
+}
+
+#button-up:hover{
+    transform: scale(1);
+    border-color:  rgba(0, 0, 0, 0.8);
+}
+
+#text{
+    display: block;
+    color: #000;
+    font-weight: 500;
+    padding: 1px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+
+/*+++++++++++++++++++++++++++++++++++++++*/
+/* ESTILO PARA PANTALLAS PEQUEÑAS        */
+/*+++++++++++++++++++++++++++++++++++++++*/
+/*+++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 900px){
+
+    .btnMenu{
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        
+    }
+
+    .btnMenu:before{
+        content: '';
+        position: absolute;
+        top: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        box-shadow: 0 10px 0 #000;
+    }
+    .btnMenu:after{
+        content: '';
+        position: absolute;
+        bottom: 4px;
+        width: 100%;
+        height: 2px;
+        background: #000;
+        z-index: 1;
+        transition: 0.5s;
+    }
+  
+    header,
+    header.sticky{
+        padding: 5px 50px;
+        background: #7aba32;
+    }
+    header .logo,
+    header ul li a{
+        color: #0c29acb9;
+        
+    }
+
+    header ul{
+
+        position: absolute;
+        top: 59px;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        overflow: auto;
+        visibility: hidden;
+        background: #fff;
+        opacity: 0;
+
+     }
+
+     header.active ul{
+        visibility: visible;
+        opacity: 1;
+        display: block;
+        padding-top: 20px;
+
+     }
+    
+    header.active ul li a{
+        display: inline-block;
+        margin: 10px 0;
+        font-size: 25px;
+    }
+
+    .banner{
+        background-position: center;
+    } 
+
+    .banner h2{
+        font-size: 70px;
+        padding: 0 50px;
+      
+    }
+    .sec{
+        padding: 100px 50px 50px 50px;
+    }
+    .btn{
+    margin-right: 30px;
+    }
+    .about .box {
+    width: 100%; 
+    }
+    .stats{
+        padding-top: 250px;
+    }
+
+    .row100{
+        flex-direction: column;
+    }
+
+    .contactForm .row100 .inputBx50,
+    .contactForm .row100 .inputBx100{
+        width: 100%;
+        margin: 0;
+
+    }
+
+    .sci{
+        margin: 20px;
+        width: 100%; 
+        
+
+    }
+
+    .sci ul li a img{
+        font-size: 24px;
+    }    
+
+}
+
+
+
+/*
+
+   header ul{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    .btnMenu{
+        width: 30px;
+        height: 30px;
+        background: #7aba32;
+        cursor: pointer;
+    }
+
+    .banner{
+        background-position: center;
+    }
+
+    .banner h2{
+        font-size: 60px;
+        padding: 0 50px;
+    }
+    .services .box{
+        width: 100%;
+    }
+    .casoBx .persona{
+        margin: 0 auto;
+    }
+    .advan .advanBox .box{
+        margin: 0 auto;
+    }
+}
+
+*/
+
+
+
+
+
+
+
+
+
